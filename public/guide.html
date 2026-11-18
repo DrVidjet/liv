@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Как пользоваться · Маленький космос</title>
+<style>
+:root{--ink:#f2efff;--muted:#c9cde8;--glass:rgba(26,38,77,.55);--edge:rgba(198,211,255,.35);--accent:#b9c3ff;--button:rgba(90,108,175,.75)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:16px}
+html{background:radial-gradient(1200px 700px at 80% -10%,#3a3f86 0%,transparent 60%),radial-gradient(900px 600px at -10% 30%,#2b2f6e 0%,transparent 55%),linear-gradient(#141a3d,#0c1029 1400px,#0a0d22) #0a0d22}
+body{margin:0;color:var(--ink);font:17px/1.6 Georgia,'Times New Roman',serif;min-height:100vh}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;
+ background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 72% 12%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 40% 64%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 88% 48%,#fff 50%,transparent 51%),radial-gradient(1.4px 1.4px at 22% 86%,#fff 50%,transparent 51%),radial-gradient(1px 1px at 58% 34%,#fff 50%,transparent 51%),radial-gradient(1.2px 1.2px at 94% 82%,#fff 50%,transparent 51%)}
+.wrap{max-width:760px;margin:0 auto;padding:28px 18px 80px;position:relative}
+header{text-align:center;margin:10px 0 26px}
+.eyebrow{font:12px/1 system-ui,sans-serif;letter-spacing:.22em;color:var(--muted)}
+h1{font-weight:normal;font-style:italic;font-size:clamp(34px,8vw,52px);margin:14px 0 6px}
+.lead{color:var(--muted);margin:0 auto;max-width:560px}
+.back{display:inline-block;margin-top:16px;color:var(--ink);font:15px system-ui,sans-serif;border:1px solid var(--edge);border-radius:28px;padding:9px 18px;text-decoration:none;background:var(--glass)}
+.glass{background:var(--glass);border:1px solid var(--edge);border-radius:23px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:22px clamp(16px,4vw,30px);margin:18px 0;box-shadow:0 10px 30px #050a2433}
+h2{font-weight:normal;font-style:italic;font-size:clamp(26px,6vw,34px);margin:0 0 10px}
+h3{font-weight:normal;font-size:21px;margin:26px 0 6px;color:var(--accent)}
+p{margin:8px 0}
+ul,ol{padding-left:22px;margin:8px 0}
+li{margin:5px 0}
+.muted,small{color:var(--muted)}
+figure{margin:16px auto 6px;text-align:center}
+figure img{display:block;margin:0 auto;max-width:min(100%,402px);height:auto;border-radius:18px;border:1px solid var(--edge);box-shadow:0 12px 34px #0009}
+figure.narrow img{max-width:min(100%,366px)}
+figure.wide img{max-width:min(100%,404px)}
+figcaption{font:13px/1.45 system-ui,sans-serif;color:var(--muted);margin-top:8px}
+.k{display:inline-flex;align-items:center;justify-content:center;min-width:28px;height:28px;padding:0 8px;border:1px solid var(--edge);border-radius:14px;font:15px system-ui,sans-serif;background:rgba(113,128,193,.35);vertical-align:1px}
+.tip{border-left:3px solid var(--accent);padding:4px 0 4px 14px;margin:14px 0;color:var(--muted);font:15px/1.5 system-ui,sans-serif}
+.tip b{color:var(--ink);font-weight:600}
+nav.toc ol{columns:2;column-gap:28px;font:15px/1.5 system-ui,sans-serif;padding-left:20px}
+nav.toc a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--edge)}
+nav.toc a:hover{border-color:var(--ink)}
+.cols{display:grid;grid-template-columns:1fr;gap:4px 26px;align-items:start}
+@media (min-width:720px){.cols{grid-template-columns:1fr 1fr}.cols figure{margin-top:4px}}
+dl{margin:6px 0}dt{margin-top:14px;color:var(--ink)}dd{margin:4px 0 0;color:var(--muted);font:15px/1.5 system-ui,sans-serif}
+footer{text-align:center;color:var(--muted);font:13px system-ui,sans-serif;margin-top:30px}
+@media (max-width:520px){nav.toc ol{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+ <div class="eyebrow">✧ ЛИЧНЫЙ КОСМОС ✧</div>
+ <h1>Как пользоваться</h1>
+ <p class="lead">Меню на день из того, что есть дома, дела, календарь тренировок и созвездия. Всё самое нужное — на этой странице.</p>
+ <a class="back" href="/">← Вернуться в приложение</a>
+</header>
+
+<nav class="glass toc" aria-label="Содержание">
+ <h2>Содержание</h2>
+ <ol>
+  <li><a href="#start">Как всё устроено</a></li>
+  <li><a href="#pantry">Что есть дома</a></li>
+  <li><a href="#menu">Меню на день</a></li>
+  <li><a href="#recipe">Карточка рецепта</a></li>
+  <li><a href="#side">Основное блюдо и гарнир</a></li>
+  <li><a href="#snack">Перекусы без готовки</a></li>
+  <li><a href="#buy">Докупить и режим «Готова докупить»</a></li>
+  <li><a href="#exclude">Исключения и «Не предлагать»</a></li>
+  <li><a href="#eaten">Съедено сегодня</a></li>
+  <li><a href="#saved">Сохранённые рецепты</a></li>
+  <li><a href="#tasks">Мои дела</a></li>
+  <li><a href="#calendar">Календарь</a></li>
+  <li><a href="#stars">Созвездия</a></li>
+  <li><a href="#settings">Настройки и тема</a></li>
+  <li><a href="#faq">Если что-то не так</a></li>
+ </ol>
+</nav>
+
+<section class="glass" id="start">
+ <h2>Как всё устроено</h2>
+ <p>Внизу экрана — панель с шестью разделами:</p>
+ <figure class="wide"><img src="guide/nav.webp" width="404" height="73" alt="Нижняя панель с пятью кнопками"></figure>
+ <ul>
+  <li><b>✦ Питание</b> — меню на день, продукты, исключения и что съедено.</li>
+  <li><b>☑ Дела</b> — список дел, можно с датой.</li>
+  <li><b>📅 Календарь</b> — тренировки, заметки и дела по дням.</li>
+  <li><b>✧ Созвездия</b> — звёздочки за выполненные дела.</li>
+  <li><b>⚙ Настройки</b> — тема и ориентиры по КБЖУ.</li>
+  <li><b>📜 Как пользоваться</b> — это руководство.</li>
+ </ul>
+ <p>Вверху справа — кнопка смены дневного и ночного вида:</p>
+ <figure class="wide"><img src="guide/header.webp" width="398" height="58" alt="Шапка приложения с кнопкой темы"></figure>
+ <div class="tip"><b>Где хранятся данные.</b> Продукты, сохранённые рецепты, дела, календарь и дневник питания хранятся в этом браузере — на другом телефоне или компьютере их не будет. Общие только список «Что исключить» и «Не предлагать рецепты»: они на сервере.</div>
+</section>
+
+<section class="glass" id="pantry">
+ <h2>Что есть дома</h2>
+ <div class="cols">
+  <div>
+   <p>Начни с этого блока — по нему подбирается всё меню. Впиши продукт и нажми <span class="k">＋</span> (или Enter). Подсказки появляются по мере ввода.</p>
+   <ul>
+    <li>Продукт убирается крестиком <span class="k">×</span> на плашке.</li>
+    <li><b>Соль, сахар, перец, мука, масло, специи</b> считаются всегда — их можно не писать.</li>
+    <li>Пиши и то, что едят «как есть»: <b>хлебцы, огурцы, джем, варенье, арахисовую пасту, мороженое, ягоды, кетчуп</b>. Их приложение подставит к блюдам и соберёт из них перекусы.</li>
+    <li>Названия можно писать по-простому: «картошка», «курица», «помидоры» — приложение поймёт, что подходит и «красный картофель», и «филе грудки».</li>
+   </ul>
+   <p>После каждого изменения меню пересобирается само.</p>
+  </div>
+  <figure><img src="guide/pantry.webp" width="402" height="496" alt="Блок «Что есть дома?» с продуктами-плашками" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="menu">
+ <h2>Меню на день</h2>
+ <div class="cols">
+  <div>
+   <p>Приложение ищет рецепты на <b>Food.ru</b> по твоим продуктам и раскладывает их на <b>завтрак, обед, полдник и ужин</b>. Под названием — калории, белки, жиры и углеводы на одну порцию.</p>
+   <p>У каждого блюда справа четыре кнопки:</p>
+   <ul>
+    <li><span class="k">+</span> — съела одну порцию: блюдо и его КБЖУ запишутся в «Съедено сегодня». Кнопка на секунду превратится в ✓.</li>
+    <li><span class="k">↻</span> — показать другое блюдо вместо этого. Остальные не меняются.</li>
+    <li><span class="k">×</span> — больше никогда не предлагать это блюдо (вернуть можно в «Что исключить»).</li>
+    <li><span class="k">☆</span> — сохранить рецепт в коллекцию. Звёздочка станет жёлтой <span class="k">★</span>; нажми ещё раз, чтобы убрать.</li>
+   </ul>
+   <p>Кнопка <b>«✦ Подобрать другое меню»</b> меняет сразу всё.</p>
+   <p>Строка <b>«Подать с: …»</b> подсказывает, что из твоих продуктов поставить рядом: хлебцы и огурцы к супу, варенье к каше, кетчуп к ужину.</p>
+   <div class="tip"><b>Первый подбор</b> после изменения продуктов может занять 5–10 секунд — приложение в этот момент читает Food.ru. Дальше всё быстрее.</div>
+  </div>
+  <figure><img src="guide/menu.webp" width="402" height="912" alt="Меню на день: завтрак, обед, полдник, ужин" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="recipe">
+ <h2>Карточка рецепта</h2>
+ <div class="cols">
+  <div>
+   <p>Нажми на название блюда — откроется рецепт:</p>
+   <ul>
+    <li>сколько порций получится и сколько это готовить;</li>
+    <li>продукты с граммовками (на весь рецепт);</li>
+    <li>шаги приготовления;</li>
+    <li>ссылка <b>«Оригинал на Food.ru»</b> — там фото к каждому шагу.</li>
+   </ul>
+   <p>Кнопки <span class="k">+</span> <span class="k">↻</span> <span class="k">×</span> <span class="k">☆</span> остаются справа от названия и в раскрытой карточке.</p>
+   <p>Нажми на название ещё раз, чтобы свернуть.</p>
+  </div>
+  <figure class="narrow"><img src="guide/recipe.webp" width="366" height="694" alt="Раскрытая карточка рецепта" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="side">
+ <h2>Основное блюдо и гарнир</h2>
+ <div class="cols">
+  <div>
+   <p>На обед и ужин приложение сначала ищет <b>блюдо с мясом, курицей или рыбой</b>. Если в нём нет крупы или картошки, ниже появляется отдельный <b>гарнир</b>.</p>
+   <p>У основного блюда и у гарнира — <b>свои кнопки</b> <span class="k">+</span> <span class="k">↻</span> <span class="k">×</span> <span class="k">☆</span>: можно поменять только гарнир, оставив курицу, или наоборот, отметить съеденным или сохранить что-то одно.</p>
+   <p>На обед в первую очередь предлагается <b>суп</b>.</p>
+  </div>
+  <figure class="narrow"><img src="guide/dinner.webp" width="366" height="208" alt="Ужин: основное блюдо и гарнир, у каждого свои кнопки" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="snack">
+ <h2>Перекусы без готовки</h2>
+ <div class="cols">
+  <div>
+   <p>Из того, что едят «как есть», приложение собирает перекусы: <b>«Хлебцы + арахисовая паста + варенье»</b>, <b>«Мороженое + клубника»</b>, <b>«Нут + ягоды»</b>. Они появляются на полдник, а с хлебцами — и на завтрак.</p>
+   <p>КБЖУ у них примерное (знак <b>≈</b>) — по обычной порции каждого продукта.</p>
+   <p>Перекусы чередуются с рецептами: мороженое не будет выпадать каждый раз.</p>
+  </div>
+  <figure class="narrow"><img src="guide/snack.webp" width="366" height="299" alt="Перекус без готовки на полдник" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="buy">
+ <h2>Докупить и режим «Готова докупить»</h2>
+ <h3>Галочка «Можно докупить лук, чеснок или морковь»</h3>
+ <div class="cols">
+  <div>
+   <p>Очень многим блюдам не хватает только лука или чеснока. Пока галочка стоит, приложение предлагает и такие блюда — примерно одно из трёх — и пишет под названием <i>«докупить: лук»</i>.</p>
+   <p>Совсем не хочется в магазин — <b>сними галочку</b>, и в меню останется только то, что можно приготовить прямо сейчас.</p>
+  </div>
+  <figure class="narrow"><img src="guide/almost.webp" width="366" height="156" alt="Блюдо с пометкой «докупить: белый лук»" loading="lazy"></figure>
+ </div>
+ <h3>Режим «Готова докупить»</h3>
+ <div class="cols">
+  <div>
+   <p>Вверху меню переключи <b>«Из того, что есть» → «Готова докупить»</b> и впиши в блок <b>«Готова докупить»</b> продукты, за которыми готова сходить. Тогда в меню попадут блюда и с ними, а под названием будет видно, что именно купить.</p>
+  </div>
+  <figure><img src="guide/shopping.webp" width="402" height="198" alt="Блок «Готова докупить»" loading="lazy"></figure>
+ </div>
+ <h3>Идеи «если докупить»</h3>
+ <div class="cols">
+  <div>
+   <p>Внизу меню — свёрнутый блок <b>«Что ещё можно приготовить, если докупить продукты»</b>: блюда, которым не хватает одного-двух продуктов.</p>
+   <ul>
+    <li><b>«Съедена одна порция»</b> (в раскрытой карточке) — записать в «Съедено сегодня»;</li>
+    <li><b>«Готова докупить»</b> — добавит недостающее в список покупок;</li>
+    <li><b>«Пропустить»</b> — скроет идею до перезагрузки страницы;</li>
+    <li><span class="k">×</span> — больше не предлагать.</li>
+   </ul>
+  </div>
+  <figure class="narrow"><img src="guide/ideas.webp" width="366" height="530" alt="Идеи: что можно приготовить, если докупить" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="exclude">
+ <h2>Исключения и «Не предлагать»</h2>
+ <div class="cols">
+  <div>
+   <p>Здесь продукты, которые нельзя или не хочется. У каждого — <b>два режима</b>:</p>
+   <ul>
+    <li><b>Исключить совсем</b> — ни одного блюда, где этот продукт есть хоть в каком-то виде.</li>
+    <li><b>Только блюда из него</b> — не предлагать блюда, где продукт главный, но разрешить его в составе. Например, для яиц: <i>омлет, яичница и салат с яйцом — нет, а блины и тесто с яйцом — да</i>. Яйца при этом можно добавить в «Что есть дома».</li>
+   </ul>
+   <p>Режим выбирается в списке над полем ввода, а у уже добавленного продукта — кнопкой <b>«Совсем» / «Только блюда»</b>. <b>«Вернуть»</b> убирает исключение.</p>
+   <p>Ниже, под <b>«Не предлагать рецепты»</b>, — всё, что ты скрыла крестиком <span class="k">×</span>. Любое блюдо можно вернуть.</p>
+  </div>
+  <figure><img src="guide/exclude.webp" width="402" height="409" alt="Блок «Что исключить» с режимами и скрытыми рецептами" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="eaten">
+ <h2>Съедено сегодня</h2>
+ <div class="cols">
+  <div>
+   <p>Каждое нажатие <span class="k">+</span> у блюда в меню добавляет его сюда, а сверху считается сумма КБЖУ за день. Съела две порции — нажми <span class="k">+</span> два раза. Ошиблась — нажми <b>«Отменить»</b> у нужной строки.</p>
+   <p>Новый день начинается с чистого листа, прошлые дни сохраняются в браузере.</p>
+  </div>
+  <figure><img src="guide/eaten.webp" width="402" height="237" alt="Блок «Съедено сегодня»" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="saved">
+ <h2>Сохранённые рецепты</h2>
+ <div class="cols">
+  <div>
+   <p>Понравилось блюдо — нажми <span class="k">☆</span> справа от него. Звёздочка станет жёлтой, а рецепт целиком — продукты, шаги, КБЖУ и ссылка — сохранится, даже если в меню он больше не попадётся. Сохранять можно и основное блюдо, и гарнир, и перекус.</p>
+  </div>
+  <figure class="narrow"><img src="guide/saved.webp" width="366" height="208" alt="Сохранённые блюдо и гарнир с жёлтыми звёздочками" loading="lazy"></figure>
+ </div>
+ <div class="cols">
+  <div>
+   <p>Найти их — в разделе <b>✧ Созвездия → Коллекции</b>: нажми <b>«✦ Рецепты»</b> (цифра рядом — сколько сохранено).</p>
+   <ul>
+    <li>Рецепты разложены по спискам <b>Завтрак, Обед, Полдник, Ужин</b> — по тому, где блюдо было в меню, когда ты его сохранила. Гарнир попадает туда же, где его основное блюдо.</li>
+    <li>Нажми на список, чтобы раскрыть, и на название — чтобы открыть рецепт.</li>
+    <li><span class="k">+</span> — записать съеденную порцию, <span class="k">★</span> — убрать из сохранённых.</li>
+   </ul>
+  </div>
+  <figure><img src="guide/collection.webp" width="402" height="520" alt="Коллекция рецептов: списки по приёмам пищи" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="tasks">
+ <h2>Мои дела</h2>
+ <div class="cols">
+  <div>
+   <ul>
+    <li>Напиши дело и при желании выбери <b>дату</b> — оно появится и в календаре.</li>
+    <li>Галочка слева — дело сделано. <b>Каждое выполненное дело зажигает звезду</b> в «Созвездиях».</li>
+    <li><span class="k">✎</span> — изменить текст или дату, <span class="k">×</span> — удалить (дело рассыпается звёздной пылью ✧).</li>
+    <li>Удалила по ошибке — <b>«Отменить удаление»</b>; работает даже после перезагрузки, по одному делу за раз.</li>
+   </ul>
+  </div>
+  <figure><img src="guide/tasks.webp" width="402" height="684" alt="Раздел «Мои дела»" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="calendar">
+ <h2>Календарь</h2>
+ <div class="cols">
+  <div>
+   <p>Каждый день — звёздочка. Стрелки <span class="k">‹</span> <span class="k">›</span> листают месяцы, <b>«Сегодня»</b> возвращает к текущему дню.</p>
+   <ul>
+    <li><b>Сияние</b> — выбранный день.</li>
+    <li><b>Пунктирная звезда вокруг</b> — в этот день была тренировка.</li>
+    <li><b>Точка</b> — есть дела или заметка.</li>
+   </ul>
+   <p>Нажми на день, и ниже можно:</p>
+   <ul>
+    <li><b>«Отметить тренировку»</b> (или снять отметку);</li>
+    <li>написать <b>заметку</b> и нажать «Сохранить заметку»;</li>
+    <li>посмотреть дела на этот день и <b>добавить новое</b>.</li>
+   </ul>
+  </div>
+  <figure><img src="guide/calendar.webp" width="402" height="1065" alt="Календарь с отметками тренировок и заметкой" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="stars">
+ <h2>Созвездия</h2>
+ <div class="cols">
+  <div>
+   <p>Созвездие из пяти звёзд. Звёзды зажигаются <b>за выполненные дела</b>, а ещё можно добавить звёздочку вручную — кнопкой <b>«✧ Добавить звёздочку»</b>, просто так, за хороший день.</p>
+   <p>Ниже — <b>Коллекции</b>. В «✦ Рецепты» лежат сохранённые рецепты (<a href="#saved">подробнее</a>), «Привычки» и «Заметки» пока только задуманы.</p>
+  </div>
+  <figure><img src="guide/stars.webp" width="402" height="260" alt="Созвездие из пяти звёзд" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="settings">
+ <h2>Настройки и тема</h2>
+ <div class="cols">
+  <div>
+   <ul>
+    <li><b>Тема</b> меняется сама: днём (5:00–17:00) — светлая, вечером и ночью — тёмная. Кнопка вверху справа переключает вид вручную до перезагрузки; <b>«Вернуть автоматическую тему»</b> отменяет ручной выбор.</li>
+    <li><b>Мои ориентиры КБЖУ</b> — свои цели по калориям, белкам, жирам и углеводам, чтобы сравнивать с «Съедено сегодня». Поля необязательные.</li>
+   </ul>
+  </div>
+  <figure><img src="guide/settings.webp" width="402" height="602" alt="Раздел «Настройки»" loading="lazy"></figure>
+ </div>
+</section>
+
+<section class="glass" id="faq">
+ <h2>Если что-то не так</h2>
+ <dl>
+  <dt>«Ищу рецепты на Food.ru…» долго висит</dt>
+  <dd>Первый подбор после изменения продуктов занимает до 10 секунд. Если дольше — обнови страницу.</dd>
+  <dt>«Сервер ещё занят прошлым запросом»</dt>
+  <dd>Подожди пару секунд и нажми ещё раз — видимо, кнопки нажимались очень быстро.</dd>
+  <dt>«Food.ru сейчас недоступен»</dt>
+  <dd>Сайт с рецептами не ответил. Попробуй через минуту.</dd>
+  <dt>Блюдо странное или не нравится</dt>
+  <dd>Нажми <span class="k">↻</span>, чтобы поменять, или <span class="k">×</span>, чтобы оно больше не появлялось.</dd>
+  <dt>«Пока нет блюда из выбранных продуктов»</dt>
+  <dd>Из того, что есть, на этот приём пищи ничего не нашлось. Добавь продуктов, поставь галочку «Можно докупить…» или загляни в идеи внизу меню.</dd>
+  <dt>На другом устройстве пусто</dt>
+  <dd>Продукты, дела и календарь хранятся в браузере, где их вводили. На новом устройстве их нужно ввести заново.</dd>
+  <dt>КБЖУ кажется слишком большим</dt>
+  <dd>Цифры взяты с Food.ru и посчитаны на одну порцию рецепта. У некоторых рецептов порции просто очень большие.</dd>
+ </dl>
+</section>
+
+<footer>
+ <a class="back" href="/">← Вернуться в приложение</a>
+ <p>✧ «Даже маленькая звёздочка — уже целая история» ✧</p>
+</footer>
+
+</div>
+</body>
+</html>
